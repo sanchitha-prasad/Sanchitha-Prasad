@@ -1,11 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   images: {
-    // Allow optimisation of local public images
-    remotePatterns: [],
+    unoptimized: true,
   },
-  // Strict mode for better dev experience
   reactStrictMode: true,
 };
 

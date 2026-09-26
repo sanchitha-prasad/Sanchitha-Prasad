@@ -21,16 +21,25 @@ export default function ContactPage() {
     const message = formData.get("message") as string;
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "b2a135b8-910c-4596-9992-ee8206f85efc",
+          name,
+          email,
+          message,
+          subject: `Portfolio Inquiry from ${name}`,
+        }),
       });
 
       const data = await res.json();
 
-      if (data.fallback) {
-        // Fallback to mailto link if API key is pending
+      if (!data.success) {
+        // Fallback to mailto link if API key is unverified
         const mailtoSubject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
         const mailtoBody = encodeURIComponent(
           `Hi Sanchitha,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
