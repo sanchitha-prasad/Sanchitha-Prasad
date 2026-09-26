@@ -8,6 +8,7 @@ import NoteCard from "@/components/NoteCard";
 import SectionLabel from "@/components/SectionLabel";
 import TechTag from "@/components/TechTag";
 import { ArrowRightIcon, ChevronRightIcon } from "@/components/Icons";
+import { getAssetUrl } from "@/lib/utils";
 
 const metrics = [
   { value: "5+", label: "Years Experience" },
@@ -261,7 +262,7 @@ export default function HomePage() {
                     }}
                   />
                   <Image
-                    src="/hero-diagram.jpg"
+                    src={getAssetUrl("/hero-diagram.jpg")}
                     alt="Software architecture diagram — Business Problem to Product"
                     width={520}
                     height={390}
@@ -374,7 +375,7 @@ export default function HomePage() {
                   >
                     <div className="relative w-36 h-44 sm:w-40 sm:h-48 rounded-xl overflow-hidden flex-shrink-0 border border-blue-500/30">
                       <img
-                        src="/sanchitha-prasad.jpg"
+                        src={getAssetUrl("/sanchitha-prasad.jpg")}
                         alt="Sanchitha Prasad — Software Engineer"
                         className="w-full h-full object-cover object-top"
                       />

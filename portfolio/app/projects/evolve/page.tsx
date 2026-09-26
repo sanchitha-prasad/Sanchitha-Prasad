@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import { ArrowLeftIcon } from "@/components/Icons";
+import { getAssetUrl } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Evolve Corporate Platform — Case Study | Sanchitha Prasad",
@@ -98,7 +99,7 @@ export default function EvolveCaseStudy() {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 -mt-1">
           <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <Image src="/evolve-new.jpg" alt="Evolve Corporate & Business Solutions — Finance, Transformation & Insight" width={1200} height={675} className="w-full" priority />
+            <Image src={getAssetUrl("/evolve-new.jpg")} alt="Evolve Corporate & Business Solutions — Finance, Transformation & Insight" width={1200} height={675} className="w-full" priority />
           </div>
         </div>
 

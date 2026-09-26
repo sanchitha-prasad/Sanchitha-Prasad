@@ -5,6 +5,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import TechTag from "@/components/TechTag";
 import { UserIcon, BookOpenIcon, LayersIcon } from "@/components/Icons";
+import { getAssetUrl } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "About | Sanchitha Prasad — Software Engineer",
@@ -70,7 +71,7 @@ export default function AboutPage() {
                 <div className="lg:sticky lg:top-28">
                   <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#E4E2DC] max-w-xs mx-auto lg:mx-0 group">
                     <img
-                      src="/sanchitha-prasad.jpg"
+                      src={getAssetUrl("/sanchitha-prasad.jpg")}
                       alt="Sanchitha Prasad — Software Engineer"
                       className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                       style={{ borderRadius: "16px", display: "block" }}

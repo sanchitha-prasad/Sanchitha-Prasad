@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import TechTag from "./TechTag";
 import { ArrowUpRightIcon } from "@/components/Icons";
+import { getAssetUrl } from "@/lib/utils";
 
 interface ProjectCardProps {
   number: string;
@@ -27,7 +28,7 @@ export default function ProjectCard({
       {/* Image */}
       <div className="relative overflow-hidden bg-[#0D1B2A] aspect-video lg:aspect-auto min-h-64">
         <Image
-          src={image}
+          src={getAssetUrl(image)}
           alt={`${title} project screenshot`}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"

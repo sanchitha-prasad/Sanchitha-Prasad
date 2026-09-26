@@ -7,12 +7,17 @@ if (isGithubActions) {
   repo = process.env.GITHUB_REPOSITORY?.replace(/.*?\//, "") || "";
 }
 
+const basePath = repo ? `/${repo}` : "";
+
 const nextConfig: NextConfig = {
   output: "export",
   images: {
     unoptimized: true,
   },
-  ...(repo ? { basePath: `/${repo}` } : {}),
+  basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   reactStrictMode: true,
 };
 

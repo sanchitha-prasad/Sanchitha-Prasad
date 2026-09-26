@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 import { ArrowLeftIcon } from "@/components/Icons";
+import { getAssetUrl } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Rental ERP — Case Study | Sanchitha Prasad",
@@ -95,7 +96,7 @@ export default function RentalErpCaseStudy() {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 -mt-1">
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-[#E4E2DC]">
-            <Image src="/rental-erp-new.jpg" alt="Baseplan Enterprise ERP platform — Sales, Rentals, Service, Parts & Financials" width={1200} height={675} className="w-full" priority />
+            <Image src={getAssetUrl("/rental-erp-new.jpg")} alt="Baseplan Enterprise ERP platform — Sales, Rentals, Service, Parts & Financials" width={1200} height={675} className="w-full" priority />
           </div>
         </div>
 
